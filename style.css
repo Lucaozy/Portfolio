@@ -1,0 +1,60 @@
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+
+body {
+  color: black;
+  text-align: center;
+
+  /*background-image: url(./assets/bg-mobile.jpg) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  */
+
+  /*background: image repeat position/size*/
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+#container {
+  background-color: rgb(255, 255, 255);
+  height: 550px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-top: 20px;
+  }
+
+  #profile {
+    text-align: center;
+    padding: 24px;
+  }
+
+  #profile img{
+    display: block;
+    width: 112px;
+    margin: auto;
+  }
+
+  #linkgit {
+    font-weight: 500;
+    line-height: 24px;
+    color: black;
+  }
+
+  #linklinkedin {
+    font-weight: 500;
+    line-height: 24px;
+    color: black;
+  }
