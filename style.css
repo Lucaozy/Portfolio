@@ -28,12 +28,13 @@ p {
 }
 
 #container {
-  background-color: rgb(255, 255, 255);
+  background-color: #d7d7d7;
   height: 550px;
   width: 100%;
   border-radius: 10px;
   border: 1px solid white;
   margin-top: 20px;
+  padding: 0 24px;
   }
 
   #profile {
@@ -47,14 +48,53 @@ p {
     margin: auto;
   }
 
-  #linkgit {
+  /*LISTA DE LINKS*/
+  #container2{
+    width: 250px;
+    margin: auto;
+    padding: 0 24px;
+  }
+  ul{
+    list-style: none;
+    
+    gap: 8PX;
+  }
+
+  ul li A {
+    margin: auto;
+    border-radius: 5PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: #A9A9A9;
+    border: 1px solid gray;
+
+    /*Desfoque*/
+    backdrop-filter: blur(10px);
+
+    /*Para tirar sublinhado*/
+    text-decoration: none;
     font-weight: 500;
-    line-height: 24px;
+
+    /*Ao passar o mouse, tem um tempo para o botão mudar de cor*/
+    transition: background 0.5s;
+  }
+
+  /*Config do hover, para mudar botão ao passar o mouse*/
+  ul li a:hover{
+    background: gray;
+    border: 1px solid black;
+  }
+
+  #linkgit {
+    /*background-color: gray;*/
+    font-weight: 500;
     color: black;
   }
 
   #linklinkedin {
+    /*background-color: gray ;*/
     font-weight: 500;
-    line-height: 24px;
     color: black;
   }
