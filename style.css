@@ -5,17 +5,16 @@
 }*/
 
 body {
-  color: black;
+  color: white;
   text-align: center;
 
-  /*background-image: url(./assets/bg-mobile.jpg) ;
+  background-image: url(./assets/bg-mobile.jpg) ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  */
 
-  /*background: image repeat position/size*/
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: image repeat position/size
+  /*background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;*/
 }
 
 body * {
@@ -27,7 +26,7 @@ p {
   font-size: 15px;
 }
 
-#container {
+/*#container {
   background-color: #d7d7d7;
   height: 550px;
   width: 100%;
@@ -35,7 +34,7 @@ p {
   border: 1px solid white;
   margin-top: 20px;
   padding: 0 24px;
-  }
+  }*/
 
   #profile {
     text-align: center;
@@ -49,15 +48,18 @@ p {
   }
 
   /*LISTA DE LINKS*/
-  #container2{
+ #container2{
     width: 250px;
     margin: auto;
     padding: 0 24px;
   }
+
   ul{
     list-style: none;
     
     gap: 8PX;
+
+    padding: 24px 0;
   }
 
   ul li A {
@@ -67,9 +69,9 @@ p {
     justify-content: center;
     align-items: center;
     padding: 16px 24px;
-    background: #A9A9A9;
     border: 1px solid gray;
-
+    color: white;
+  
     /*Desfoque*/
     backdrop-filter: blur(10px);
 
@@ -78,23 +80,53 @@ p {
     font-weight: 500;
 
     /*Ao passar o mouse, tem um tempo para o botão mudar de cor*/
-    transition: background 0.5s;
+    
+  }
+
+  li{
+    padding: 5px;
   }
 
   /*Config do hover, para mudar botão ao passar o mouse*/
   ul li a:hover{
-    background: gray;
+    background: #a9a9a9;
     border: 1px solid black;
+    transform: background 0.4s;
   }
 
-  #linkgit {
-    /*background-color: gray;*/
-    font-weight: 500;
-    color: black;
-  }
+ /*#sociallinks1{
+  display: flex;
+  justify-content: center;
 
-  #linklinkedin {
-    /*background-color: gray ;*/
-    font-weight: 500;
-    color: black;
-  }
+  padding: 24px 0;
+
+  font-size: 24px;
+ }
+
+ #sociallinks1 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    background: white;
+    transition: background 0.5s;
+    border-radius: 50%;
+ }
+
+ ion-icon{
+  color: white;
+  font-size: 32px;
+  border-radius: 50%;
+}
+
+ion-icon a:hover{
+  transform: background 0.4s;
+  background-color: white;
+}*/
+
+footer{
+  padding: 160px 0;
+  text-align: center;
+  font-size: 14px;
+}
