@@ -1,44 +1,64 @@
-/** {
+ /**{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}*/
+ }*/
+  :root{
+    --text-color: white;
+    --bg-url: url(assets/bg-mobile.jpg);
+    --stroke-color: rgba(255,255,255, 0.5);
+    --surface-color: rgba(255,255,255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --switch-bg-url: url(assets/assets/moon-stars.svg);
+  }
+
+  .light{
+    --text-color: black;
+    --bg-url: url(assets/bg-desktop-light.jpg);
+    --stroke-color: rgba(0,0,0, 0.5);
+    --surface-color: rgba(0,0,0, 0.05);
+    --surface-color-hover: rgba(0,0,0,0.02);
+    --switch-bg-url: url(assets/assets/sun.svg)
+  }
 
 body {
-  color: white;
   text-align: center;
+  background: var(--bg-url) no-repeat top center/cover; 
 
-  background-image: url(./assets/bg-mobile.jpg) ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  background: image repeat position/size
+
+  /*background: image repeat position/size*/
   /*background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;*/
 }
 
 body * {
-  font-family: "Inter", sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: var(--text-color);
 }
 
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-}
-
-/*#container {
-  background-color: #d7d7d7;
+#container {
+  background-color: var(--surface-color);
   height: 550px;
+  max-width: 588px;
   width: 100%;
-  border-radius: 10px;
-  border: 1px solid white;
-  margin-top: 20px;
+  margin: 56px auto 0px;
   padding: 0 24px;
-  }*/
+
+  border-radius: 10px;
+  border: 1px solid var(--stroke-color);
+  margin-top: 45px;
+
+  backdrop-filter: blur(4px);
+  --webkit-backdrop-filter: blur(4px);
+  }
 
   #profile {
     text-align: center;
-    padding: 24px;
+    padding: 10px;
+    height: 150px;
   }
 
   #profile img{
@@ -47,86 +67,72 @@ p {
     margin: auto;
   }
 
-  /*LISTA DE LINKS*/
- #container2{
-    width: 250px;
-    margin: auto;
-    padding: 0 24px;
+  #switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
   }
 
-  ul{
-    list-style: none;
-    
-    gap: 8PX;
-
-    padding: 24px 0;
-  }
-
-  ul li A {
-    margin: auto;
-    border-radius: 5PX;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 24px;
-    border: 1px solid gray;
-    color: white;
-  
-    /*Desfoque*/
-    backdrop-filter: blur(10px);
-
-    /*Para tirar sublinhado*/
-    text-decoration: none;
-    font-weight: 500;
-
-    /*Ao passar o mouse, tem um tempo para o botão mudar de cor*/
-    
-  }
-
-  li{
-    padding: 5px;
-  }
-
-  /*Config do hover, para mudar botão ao passar o mouse*/
-  ul li a:hover{
-    background: #a9a9a9;
-    border: 1px solid black;
-    transform: background 0.4s;
-  }
-
- /*#sociallinks1{
-  display: flex;
-  justify-content: center;
-
-  padding: 24px 0;
-
-  font-size: 24px;
- }
-
- #sociallinks1 a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-
-    background: white;
-    transition: background 0.5s;
+  #switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0px;
     border-radius: 50%;
- }
 
- ion-icon{
-  color: white;
-  font-size: 32px;
-  border-radius: 50%;
-}
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform:translateY(-50%);
+  }
 
-ion-icon a:hover{
-  transform: background 0.4s;
-  background-color: white;
-}*/
+  .light #switch button{
+    right: 0;
+    left: initial;
+  }
 
-footer{
-  padding: 160px 0;
-  text-align: center;
-  font-size: 14px;
-}
+  #switch span{
+    display: block;
+    width: 62px;
+    height: 24px;
+    background: var(--surface-color);
+
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
+
+    border-radius: 9999px;
+  }
+
+  #linkgit {
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  #linklinkedin {
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  a{
+    padding: 7px;
+    
+    text-decoration: none;
+    width: 250px;
+
+    background: var(--surface-color-hover);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+
+  }
+
+  a:hover{
+    transition: background 1s;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--text-color);
+    background-color: #A9A9A9;
+  }
+
+  
+
